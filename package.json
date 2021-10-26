@@ -4,6 +4,8 @@
   "description": "This is a volunteer network website server. Here you can take different types of volunteer work and track your work. You can also login through Google.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Md. Rifat Islam",
