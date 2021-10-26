@@ -1,0 +1,17 @@
+{
+  "name": "volunteer-network-server",
+  "version": "1.0.0",
+  "description": "This is a volunteer network website server. Here you can take different types of volunteer work and track your work. You can also login through Google.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Md. Rifat Islam",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3"
+  }
+}
