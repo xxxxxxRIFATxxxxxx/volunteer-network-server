@@ -24,7 +24,17 @@ async function run() {
 
         // GET ALL EVENTS API
         app.get('/events', async (req, res) => {
-            const query = {};
+            const email = req.params.email;
+            let query;
+
+            if (email) {
+                query = { email: email }
+            }
+
+            else {
+                query = {};
+            };
+
             const cursor = eventCollection.find(query);
             const events = await cursor.toArray();
             res.send(events);
