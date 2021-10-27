@@ -24,7 +24,7 @@ async function run() {
 
         // GET ALL EVENTS API
         app.get('/events', async (req, res) => {
-            const email = req.params.email;
+            const email = req.query.email;
             let query;
             let cursor;
 
