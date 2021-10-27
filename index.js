@@ -26,16 +26,18 @@ async function run() {
         app.get('/events', async (req, res) => {
             const email = req.params.email;
             let query;
+            let cursor;
 
             if (email) {
-                query = { email: email }
+                query = { email: email };
+                cursor = volunteerCollection.find(query);
             }
 
             else {
                 query = {};
+                cursor = eventCollection.find(query);
             };
 
-            const cursor = eventCollection.find(query);
             const events = await cursor.toArray();
             res.send(events);
         });
